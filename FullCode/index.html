@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.4/swiper-bundle.min.js" integrity="sha512-hJrV+LKHbu+Hxkn/+ZwGOCMUkap0ZfjJbca9WT38z69+MYmRzMlvUd401TOs1b4byAm4fGDESpEcCbG2A6cibQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <title>CarBreezy</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+   <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></head>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />   
+</head>
+<body>
+    
+    <!-- Header/Navbar start -->
+    <header>
+      <div id="MenuBtn" class="fas fa-bars"></div>
+      <a href="" class="logo"><img src="removed_bg_images/Untitled_design_2_-removebg-preview.png" alt="">Car<span>Breezy</span></a>
+      <nav class="navbar">
+        <a href="#Home" id="home">Home</a>
+        <a href="#Vehicle" id="vehicles">Vehicles</a>
+        <a href="#Featured" id="featured">Featured</a>
+        <a href="#Services" id="services">Services</a>
+        <a href="#gallery" id="services">Gallery</a>
+        <a href="#Review" id="review">Review</a>
+        <a href="#Contact" id="contact">Contact</a>
+      </nav>
+       <style>
+            /* Style for the counter element */
+            #counter {
+              font-size: 24px;
+              font-weight: bold;
+              color: #333;
+            }
+          </style>
+          <p>Number of viewers:</p>
+          <div id="counter">0</div>
+      <div id="LoginBtn">
+        <button class="btn">Login</button>
+        <i class="fa fa-user"></i>
+      </div>
+    </header>
+    
+    <!-- Header/Navbar end -->
+
+    <!-- LoginformContainer -->
+    <div class="loginFormContainer">
+      <span id="CloseLoginForm">
+          <i class="fa fa-times"></i>  
+      </span>
+
+      <form action="">
+          <h3>User Login</h3>
+          <input type="email" placeholder="Your email" required class="box">
+          <input type="password" placeholder="Your Password" required class="box">
+          <p>Forgot your password? <a href="#">Click Here</a></p>
+          <button class="btn">Submit</button>
+          <p>or Login with</p>
+          <div class="buttons">
+              <a href="#" class="btn">Google &nbsp;&nbsp;<i class="fab fa-google"></i></a>
+              <a href="#" class="btn">Facebook&nbsp;&nbsp;<i class="fab fa-facebook"></i> </a>
+          </div>
+      </form>
+
+  </div>
+    <!-- LoginformContainer -->
+    <!-- *************** -->
+    <!-- <div class="loginFormContainer2">
+      <span id="CloseLoginForm2">
+        <i class="fa fa-times"></i>  
+    </span>
+      <div class="carImage">
+        <img src="removed_bg_images/car3-removebg-preview.png" alt="Car Image">
+      </div>
+      <div class="carPrice">
+        <p>Price: $50,000</p>
+      </div>
+    
+      <div class="carTabsContainer">
+        <ul class="carTabs">
+          <li class="active">Internal Specification</li>
+          <li>External</li>
+          <li>Engine</li>
+          <li>Dimensions</li>
+        </ul>
+    
+        <div class="carTabContent">
+          <div class="tabContent active">
+            <ul>
+              <li>Model: ABC-123</li>
+              <li>Color: Red</li>
+              <li>Interior: Leather</li>
+              <li>Seats: 5</li>
+              <li>Sound System: Bose</li>
+            </ul>
+          </div>
+          <div class="tabContent">
+            <ul>
+              <li>Body Type: Sedan</li>
+              <li>Wheels: Alloy</li>
+              <li>Tires: Michelin</li>
+              <li>Windows: Tinted</li>
+              <li>Lights: LED</li>
+            </ul>
+          </div>
+          <div class="tabContent">
+            <ul>
+              <li>Engine Type: V6</li>
+              <li>Transmission: Automatic</li>
+              <li>Power: 300 HP</li>
+              <li>Torque: 280 lb-ft</li>
+              <li>Fuel Economy: 20 mpg (city), 30 mpg (highway)</li>
+            </ul>
+          </div>
+          <div class="tabContent">
+            <ul>
+              <li>Length: 195 inches</li>
+              <li>Width: 72 inches</li>
+              <li>Height: 58 inches</li>
+              <li>Wheelbase: 112 inches</li>
+              <li>Cargo Volume: 15 cubic feet</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    
+      <div class="carButtonsContainer">
+        <button class="buyNowButton"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+        <button class="likeButton"><i class="far fa-thumbs-up"></i></button>
+      </div>
+    </div> -->
+    
+    
+    <!-- *************** -->
+
+    <!-- Home Section start -->
+    <section id="Home" class="home">
+        <h3 class="homeParallexEffect" id="homeText">Find Cars in a <span>Breeze</span> </h3>
+        <img src="Images/background-removebg-preview.png" class="homeParallexEffect" id="homeImage" alt="">
+        <a href="#gallery" class="btn" id="Btn">View Cars</a>
+    </section>
+    <!-- Home section end -->
+
+    <!-- Icon Container Start -->
+    <section class="iconsContainer">
+
+        <div class="icons">
+            <i class="fa-solid fa-home"></i>
+
+            <div class="content">
+                <h3>100+</h3>
+                <p>Branches</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-car"></i>
+
+            <div class="content">
+                <h3>5870+</h3>
+                <p>Cars Sold</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-users"></i>
+
+            <div class="content">
+                <h3>2256+</h3>
+                <p>Happy Customers</p>
+            </div>
+        </div>
+        <div class="icons">
+            <i class="fa-solid fa-fire"></i>
+
+            <div class="content">
+                <h3>1000+</h3>
+                <p>New Launches</p>
+            </div>
+        </div>
+
+    </section>
+    <!-- Icon Container end -->
+
+    <!-- Vehicle section start -->
+    <section id="Vehicle" class="vehicle">
+        <h1 class="heading">Car<span>Breezy's</span> Popular Vehicles</h1>
+        <div class="vehicle-slider swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide box">
+              <img src="./Images/mustang1.webp" alt="">
+              <div class="content">
+                <h3>Mustang</h3>
+                <div class="price"><span>Price:</span>&#8358;1,002,000</div>
+                <p>
+                  <i class="fa-solid fa-calendar-days"></i>2022
+                  <i class="fa fa-gear"></i>Automatic
+                  <i class="fas fa-bolt"></i>Electric
+                  <i class="fas fa-car"></i>200mph
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide box">
+              <img src="./Images/bmw2.webp" alt="">
+              <div class="content">
+                <h3>BMW</h3>
+                <div class="price"><span>Price:</span>&#8358;1,802,000</div>
+                <p>
+                    <i class="fa-solid fa-calendar-days"></i>2019
+                    <i class="fa-solid fa-gear"></i>Manual
+                    <i class="fas fa-bolt"></i>Non-electric
+                    <i class="fas fa-car"></i>1100mph
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide box">
+              <img src="./Images/Audi R8.jpg" alt="">
+              <div class="content">
+                <h3>Audi R8</h3>
+                <div class="price"><span>Price:</span>&#8358;2,402,000</div>
+                <p>
+                    <i class="fa-solid fa-calendar-days"></i>2020
+                    <i class="fa fa-gear"></i>Manual
+                    <i class="fas fa-bolt"></i>Electric
+                    <i class="fas fa-car"></i>300mph
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide box">
+              <img src="./Images/nissan.png" alt="">
+              <div class="content">
+                <h3>Nissan</h3>
+                <div class="price"><span>Price:</span>&#8358;902,000</div>
+                <p>
+                    <i class="fa-solid fa-calendar-days"></i>2023
+                    <i class="fa fa-gear"></i>Manual
+                    <i class="fas fa-bolt"></i>Non-electric
+                    <i class="fas fa-car"></i>800mph
+                </p>
+              </div>
+            </div>
+            <div class="swiper-slide box">
+              <img src="./Images/toyota1.png" alt="">
+              <div class="content">
+                <h3>Toyota</h3>
+                <div class="price"><span>Price:</span>&#8358;3,402,000</div>
+                <p>
+                    <i class="fa-solid fa-calendar-days"></i>2023
+                    <i class="fa fa-gear"></i>Automatic
+                    <i class="fas fa-bolt"></i>Electric
+                    <i class="fas fa-car"></i>1300mph
+                </p>
+              </div>
+            </div>
+            <!-- Add more swiper-slide boxes here -->
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>  
+    <!-- Vehicle section end -->
+
+    <!-- Featured section start -->
+    <section id="Featured" class="feature">
+      <h1 class="heading">Car<span>Breezy's</span> Featured Cars</h1>
+
+      <div class="swiper FeaturesSlider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img src="./Images/img3.webp" alt="">
+            <div class="content">
+              <h3>New Model</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="price">&#8358;2,985,000</div>
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="./Images/ford1.avif" alt="">
+            <div class="content">
+              <h3>Ford</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="price">&#8358;1,285,000</div>
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="./Images/Honda1.jpg" alt="">
+            <div class="content">
+              <h3>Honda</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="price">&#8358;850,000</div>
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="./Images/mercedes1.webp" alt="">
+            <div class="content">
+              <h3>Mercedes</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="price">&#8358;995,000</div>
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img src="./Images/hyundai1.png" alt="">
+            <div class="content">
+              <h3>Hyundai</h3>
+              <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <div class="price">&#8358;2,285,000</div>
+              <a href="#" class="btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+      </div>
+
+        <!-- Second featured -->
+    <div class="swiper FeaturesSlider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide box">
+          <img src="./Images/innova.jpg" alt="">
+          <div class="content">
+            <h3>Innova</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">&#8358;3,485,000</div>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="swiper-slide box">
+          <img src="./Images/bmw1.avif" alt="">
+          <div class="content">
+            <h3>BMW</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">&#8358;895,000</div>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="swiper-slide box">
+          <img src="./Images/ferrari1.jpg" alt="">
+          <div class="content">
+            <h3>Ferrari</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">&#8358;9,985,000</div>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="swiper-slide box">
+          <img src="./Images/ford1.jpg" alt="">
+          <div class="content">
+            <h3>Ford</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">&#8358;185,000</div>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="swiper-slide box">
+          <img src="./Images/venza1.jpg" alt="">
+          <div class="content">
+            <h3>Venza</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">&#8358;3,385,000</div>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+        </div>
+        <div class="swiper-slide box">
+          <img src="./Images/jeep1.jpeg" alt="">
+          <div class="content">
+            <h3>Jeep</h3>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="price">&#8358;1,985,000</div>
+            <a href="#" class="btn">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <!-- featured section end -->
+
+    <!-- Service Section Start -->
+
+    <section id="Services" class="services">
+      <h1 class="heading">Car<span>Breezy's</span> Services</h1>
+      <div class="boxContainer">
+        <div class="box">
+          <i class="fas fa-car"></i>
+          <h3><span>Car</span> Selling</h3>
+          <p> Our website offers a convenient platform for car enthusiasts, dealerships, and individuals looking to buy or sell vehicles.</p>
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-tools"></i>
+          <h3><span>Car</span> Parts Repair</h3>
+          <p>We understand that having a car breakdown can be frustrating and inconvenient. Our website is here to help you get back on the road as quickly and smoothly as possible.</p>
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-car-crash"></i>
+          <h3><span>Car</span> Insurance</h3>
+          <p>We offer a wide range of car insurance options to fit your needs, budget, and driving habits. 
+            Whether you're looking for basic coverage or comprehensive protection, our user-friendly platform 
+            makes it easy to compare policies and find the best option for you.</p>
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="box">
+          <i class="fas fa-car-battery"></i>
+          <h3><span>Car</span> Battery Replacement</h3>
+          <p>We offer a wide range of car battery options to fit your vehicle and driving needs, including 
+            high-performance batteries for luxury cars and eco-friendly options for hybrid and electric vehicles. </p>
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="box">
+          <i class="fa-solid fa-headset"></i>
+          <h3>24/7 <span>Car</span> Support</h3>
+          <p>We offer a wide range of car support services, including emergency roadside assistance, towing, lockout services, 
+            fuel delivery, battery jump-starts, and more. </p>
+          <button class="btn">Read More</button>
+        </div>
+
+        <div class="box">
+          <i class="fa-solid fa-gas-pump"></i>
+          <h3><span>Car</span> Oil Change</h3>
+          <p>We offer a wide range of oil change options, including conventional, synthetic, and high-mileage oils, as well as oil 
+            filters and other related services. </p>
+          <button class="btn">Read More</button>
+        </div>
+      </div>
+    </section>
+    <!-- Service Section End -->
+
+
+    <!-- News Letter Section Start -->
+     <section id="NewsLetter" class="newsletter">
+      <h3>Subscribe to our NewsLetter</h3>
+      <p>Sign up for our newsletter and get insider tips, expert advice, and exclusive deals on buying your next car:.</p>
+        <form action="">
+          <input type="email" required placeholder="Enter Your email" class="email">
+          <input type="submit" value="Subscribe" class="subscribe">
+        </form>
+     </section>
+     <!-- News Letter Section End -->
+
+    <!-- Gallery Section start -->
+    <section id="gallery" class="gallery">
+      <h2 class="heading">Car<span>Breezy's</span> Car Gallery</h2>
+      <div class="gallery-container">
+        <div class="gallery-item" onclick="openPopup()">
+          <img src="./Images/Audi R8.jpg" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup()">
+          <img src="./Images/bmw1.avif" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup()">
+          <img src="./Images/bmw2.webp" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/ferrari1.jpg" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/ford1.avif" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/ford1.jpg" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/Honda1.jpg" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/hyundai1.png" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/innova.jpg" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/jeep1.jpeg" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/mercedes1.webp" alt="Car 1">
+        </div>
+        <div class="gallery-item" onclick="openPopup(this)">
+          <img src="./Images/mustang1.webp" alt="Car 1">
+        </div>
+        <!-- Add more gallery-item divs with car images here -->
+      </div>
+    </section>
+    
+    <div id="popup" class="popup">
+      <div class="PopupContainer">
+        <span id="closePopup" onclick="closePopup()">
+          <i class="fa fa-times"></i>  
+        </span>
+        <div class="carImage" onclick="showPopup()">
+          <img src="removed_bg_images/car3-removebg-preview.png" alt="Car Image">
+        </div>
+        <div class="carPrice">
+          <p>Price: $50,000</p>
+        </div>
+    
+        <div class="carTabsContainer">
+          <ul class="carTabs">
+            <li class="active" onclick="openTab(event, 'internal')">Internal Specification</li>
+            <li onclick="openTab(event, 'external')">External</li>
+            <li onclick="openTab(event, 'engine')">Engine</li>
+            <li onclick="openTab(event, 'dimensions')">Dimensions</li>
+          </ul>
+    
+          <div class="carTabContent">
+            <div id="internal" class="tabContent active">
+              <ul>
+                <li>Model: ABC-123</li>
+                <li>Color: Red</li>
+                <li>Interior: Leather</li>
+                <li>Seats: 5</li>
+                <li>Sound System: Bose</li>
+              </ul>
+            </div>
+            <div id="external" class="tabContent">
+              <ul>
+                <li>Body Type: Sedan</li>
+                <li>Wheels: Alloy</li>
+                <li>Tires: Michelin</li>
+                <li>Windows: Tinted</li>
+                <li>Lights: LED</li>
+              </ul>
+            </div>
+            <div id="engine" class="tabContent">
+              <ul>
+                <li>Engine Type: V6</li>
+                <li>Transmission: Automatic</li>
+                <li>Power: 300 HP</li>
+                <li>Torque: 280 lb-ft</li>
+                <li>Fuel Economy: 20 mpg (city), 30 mpg (highway)</li>
+              </ul>
+            </div>
+            <div id="dimensions" class="tabContent">
+              <ul>
+                <li>Length: 195 inches</li>
+                <li>Width: 72 inches</li>
+                <li>Height: 58 inches</li>
+                <li>Wheelbase: 112 inches</li>
+                <li>Cargo Volume: 15 cubic feet</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <div class="carButtonsContainer">
+          <button class="buyNowButton"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+          <button class="likeButton"><i class="far fa-thumbs-up"></i></button>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Gallery section end -->
+
+    <!-- Review Section Start -->
+    <section class="review" id="Review">
+      <h1 class="heading">Car<span>Breezy's</span> Client Review</h1>
+      <div class="swiper ReviewSlider">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide box">
+            <img alt="" src="Images/user.jpg">
+            <div class="content">
+              <h3>James Collins</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore sunt beatae provident veniam! Saepe!</p>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img alt="" src="Images/user man in office.jpg">
+            <div class="content">
+              <h3>Joshua Allen</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-stroke"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore sunt beatae provident veniam! Saepe!</p>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img alt="" src="Images/user-fine girl-smiling.jpg">
+            <div class="content">
+              <h3>Anne Mary</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-stroke"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore sunt beatae provident veniam! Saepe!</p>
+            </div>
+          </div>
+          <div class="swiper-slide box">
+            <img alt="" src="Images/user man in office.jpg">
+            <div class="content">
+              <h3>John Stones</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempore sunt beatae provident veniam! Saepe!</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+     <!-- Review Section End -->
+
+    <!-- Contact Form Start  -->
+    <section id="Contact" class="contact">
+      <h1 class="heading">Contact Car<span>Breezy</span></h1>
+    
+      <div class="row">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15859.618073746393!2d7.4922416!3d6.40630075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sng!4v1682938435996!5m2!1sen!2sng" 
+          width="600" height="523" style="border:0;" allowfullscreen="" loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+        <form action="" class="contact-form">
+          <h3>Book a Car<span>Breezy</span> Appointment</h3>
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required class="input-box">
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required class="input-box">
+          </div>
+          <div class="form-group">
+            <textarea class="input-box" required placeholder="Your Message" name="" id="" cols="30" rows="6"></textarea>
+          </div>
+          <button class="btn">Send</button>
+        </form>
+        
+        <div class="contact-info">
+          <h3>Car<span>Breezy's</span> Contact Information</h3>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@carbreezy.com">info@carbreezy.com</a></p>
+          <p><i class="fas fa-phone"></i> <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> 123 Main St, Anytown USA</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Contact Form End -->
+
+    <div id="ticker"></div>
+
+
+    <!-- Footer Start -->
+     <section class="footer">
+      <h4>About Car<span>Breezy</span></h4>
+      <p>Car Breezy is a premier car buying website that provides a seamless and hassle-free 
+        car buying experience for customers. With a focus on transparency and convenience, 
+        Car Breezy is revolutionizing the way people buy cars.
+        Their user-friendly website allows customers to easily search and compare different cars 
+        based on their preferences, including make, model, year, mileage, and price range. Car Breezy 
+        provides detailed vehicle history reports and high-quality photos for each car listed on their 
+        site, so customers can make informed decisions before making a purchase.</p>
+           <div class="icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-tiktok"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-linkedin"></i>
+           </div>
+           <p>Copyright  &#169. Made with <i class="fa-solid fa-heart"></i> by Chima Micheal</p>
+           <a href="#">&copy; Sem1Project</a>
+  </section>
+    <!-- Footer End -->
+    
+    <!-- JS linking -->
+    <script src="script.js"></script>
+    <script src="nodemailer.js"></script>
+    <!-- Swiper JS -->
+    
+</body>
+</html>
