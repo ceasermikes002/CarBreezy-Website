@@ -1,5 +1,5 @@
 :root{
-    --main:#819830;
+    --main:#005A9C;
     --border:0.2rem solid rgba(0,0,0.5);
     --box-shadow:0 0.5rem 1rem rgba(0,0,0,0.8);
 }
@@ -7,14 +7,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     text-decoration: none;
     border: none;
     outline: none;
     transition: linear 0.2s;
 }
 section{
-    padding: 2rem 9%;
+    padding: 5rem 9%; /* Increased vertical padding for sections */
 }
 ::selection {
   background-color: var(--main);
@@ -37,7 +37,7 @@ html::-webkit-scrollbar-track{
     background: #000;
 }
 .btn{
-    background: var(--main);
+    background: #007BFF;
     padding: 0.8rem 3rem;
     display: inline-block;
     margin-top: 1rem;
@@ -47,7 +47,33 @@ html::-webkit-scrollbar-track{
     font-weight: 500;
     text-align: center;
     border-radius: 0.5rem;
+    font-family: 'Montserrat', sans-serif; /* Buttons often use heading font */
 }
+.btn:hover{
+    transform: scale(1.05);
+    background: #0056b3; /* Darker shade of accent blue */
+}
+
+/* Typography for Headings */
+h1, h2, h3,
+header .logo,
+header .navbar a, /* Applied to specific navbar links, not the general 'header nav a' */
+.home h3,
+.heading,
+.vehicle-slider .box .content h3,
+.feature .box .content h3,
+.services .boxContainer .box h3, /* Assuming this selector meant .services .boxContainer .box h3, not a generic .services...h3 */
+.newsletter h3,
+.ReviewSlider .box h3, /* Assuming .ReviewSlider .box .content h3 was meant, or just .ReviewSlider .box h3 */
+.contact h3,
+.footer h4,
+.loginFormContainer form h3, /* Added as it's a clear heading */
+.iconsContainer .icons h3, /* Added as it's a clear heading */
+.feature .price /* Prices can also benefit from heading font */ {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600; /* Default weight for headings */
+}
+
 /* Header/Navbar Start */
 header{
     z-index: 10000;
@@ -55,7 +81,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    padding: 3rem 9%;
+    padding: 2rem 9%;
     background: #fff;
     box-shadow: var(--box-shadow);
     display: flex;
@@ -69,13 +95,14 @@ header .logo{
     display: flex;
     align-items: center;
 } 
-.heading{
+.heading{ /* General heading class */
     padding-bottom: 2rem;
-    font-size: 6.5rem;
+    font-size: 4rem; /* Adjusted from 6.5rem/7.5rem */
     text-align: center;
+    font-weight: 700; /* Bolder for primary headings */
 }
 .heading span{
-    color: var(--main );
+    color: var(--main);
 }
 header span{
     color: var(--main);
@@ -83,25 +110,28 @@ header span{
 header .navbar a{
     font-size: 1.7rem;
     color: #000;
-    margin: 0 1rem;
+    margin: 0 1.5rem;
+    /* font-family is now set by the grouped selector for header .navbar a */
 }
 header nav a:hover {
-    font-size: 20px;
+    font-size: 20px; /* This is 2rem if html font-size is 50% (max-width:991px) or 62.5% */
     color: var(--main);
     transition:  0.5s ease-in-out;
 }
-header nav a {
-    font-size: 20px;
+header nav a { /* This rule seems to override the previous a:hover and a, making nav links always --main color. This might be intentional or a bug in original CSS. Replicating behavior with new --main */
+    font-size: 20px; /* This is 2rem */
     color: var(--main);
     transition:  0.5s ease-in-out;
+    /* font-family is now set by the grouped selector for header .navbar a */
 }
 header .logo img {
-    width: 60px; /* adjust the width as needed */
+    width: 50px; /* adjust the width as needed */
     height: auto;
     margin-right: 0rem; /* adjust the margin as needed */
 }
 #LoginBtn .btn{
     margin-top: 0;
+    padding: 0.8rem 2.5rem; /* Specific padding for login button */
 }
 #LoginBtn i{
     color: var(--main);
@@ -117,9 +147,11 @@ header {
     background-color: #fff;
     z-index: 10; /* Ensure the header is on top of other elements */
 } 
-h3{
+h3{ /* General h3 style */
     position: relative;
     z-index: 9; 
+    font-size: 2.2rem; /* General h3 font size */
+    /* font-family and font-weight are set by the grouped selector */
 }
 #MenuBtn{
     font-size: 2.5rem;
@@ -181,9 +213,10 @@ h3{
     width: 40rem;
 }
 .loginFormContainer form h3{
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Specific h3 size, overrides general h3 if needed */
     text-transform: uppercase;
     padding-bottom: 1rem;
+    /* font-family and font-weight are set by the grouped selector */
 }
 .loginFormContainer form .box{
     font-size: 1.6rem;
@@ -193,6 +226,12 @@ h3{
     padding: 1rem 1.2rem;
     border-radius: 0.5rem;
     text-transform: none;
+}
+.loginFormContainer form .box:focus,
+.contact form .input-box:focus,
+.newsletter form input[type="email"]:focus {
+    border-color: var(--main);
+    box-shadow: 0 0 0.5rem rgba(0, 90, 156, 0.3); /* Shadow using RGB of #005A9C */
 }
 .loginFormContainer form p{
     font-size: 1.5rem;
@@ -233,31 +272,32 @@ h3{
     overflow: hidden;
 }  
 .home{
-    padding-top: 10rem;
+    padding-top: 8rem;
     overflow-x: hidden;
     text-align: center;
 }
 .home h3{
-    font-size: 7.5vw;
+    font-size: 5vw; /* Adjusted from 7.5vw, which is very large */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .home h3 span{
     color: var(--main);
 }
 .home img{
     width: 100%;
-    margin-top: -10rem;
+    margin-top: -5rem;
 }
-section a #Btn{
-    margin-top: -9rem;
+section a #Btn{ /* Assuming #Btn is the "View Cars" button */
+    margin-top: 2rem; /* Adjusted to position below the image area */
 }
 /* Home Section ENd */
 
 /* iconsConatiner */
 .iconsContainer{
-    margin-bottom: 200px;
+    margin-bottom: 8rem; /* Adjusted from 200px */
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
-    gap: 1.5rem;
+    gap: 1.5rem; /* This is the gap between icon boxes themselves */
     padding-top: 5rem;
     padding-bottom: 5rem;
 }
@@ -267,25 +307,29 @@ section a #Btn{
     align-items: center;
     box-shadow: var(--box-shadow);
     border-radius: 0.5rem;
-    gap: 1.5rem;
-    padding: 2rem;
+    gap: 2rem; /* Increased gap between icon and text within a box */
+    padding: 2.5rem; /* Increased padding within a box */
     cursor: pointer;
 }
 .iconsContainer .icons i{
-    background: #fff;
+    background: #005A9C;
+    color: #fff;
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
     font-size: 2.5rem;
     text-align: center;
     border-radius: 50%;
+    /* line-height already matches height/width (5rem) */
 }
 .iconsContainer .icons h3{
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjusted from 2.5rem */
     color: var(--main);
+    margin-bottom: 0.5rem; /* Added spacing */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .iconsContainer .icons p{
-    font-size: 1.5rem;
+    font-size: 1.4rem; /* Adjusted from 1.6rem */
     color: var(--main);
 }
 .iconsContainer .icons:hover{
@@ -299,31 +343,50 @@ section a #Btn{
 /* vehicle section start */
 .heading{
     margin-bottom: 2rem;
-    font-size: 7.5rem;
+    /* font-size set by .heading rule (4rem) */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .vehicle{
-    margin-bottom: 200px;
+    margin-bottom: 8rem; /* Adjusted from 200px */
 }
+
+/* Specific styling for the content box within vehicle slider */
+.vehicle-slider .box { /* This targets the swiper-slide's inner box */
+    padding: 2rem;
+    text-align: left;
+    border-radius: 0.5rem;
+    /* This will override the generic .box text-align: center if .vehicle-slider .box is more specific or applied later */
+    /* Assuming the structure is .vehicle-slider .swiper-slide .box where .box is the one with content */
+}
+
 .vehicle-slider .box .content h3{
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Adjusted font size */
+    margin-bottom: 1rem; /* Added margin */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .vehicle-slider .box .content .price{
     color: var(--main);
     font-weight: 600;
-    padding: 1rem 0;
-    font-size: 2.2rem;
+    padding: 1rem 0; /* Existing padding */
+    font-size: 2rem; /* Adjusted font size */
+    margin-bottom: 1rem; /* Added margin */
+    /* font-family is set by grouped selector for .feature .price, assuming this is similar */
 }
-.vehicle-slider span{
+.vehicle-slider span{ /* Assuming this is more of a detail/meta text */
     color: var(--main);
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Slightly smaller than body */
     font-weight: 500;
+    font-family: 'Open Sans', sans-serif; /* Explicitly body font */
 }
 .vehicle-slider p{
-    font-size: 1.6rem;
+    font-size: 1.4rem; /* Adjusted font size */
     color: var(--main);
     padding: 1rem 0;
     padding-top: 1.5rem;
     border-top: var(--border);
+}
+.vehicle-slider p i{ /* Spacing for icons within car details */
+    margin-right: 0.8rem;
 }
 .vehicle img{
     width: 100%;
@@ -347,26 +410,36 @@ section a #Btn{
     height: 100%;
     background-color: rgba(217, 217, 217, 0.5);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Note: If this generic .box is the one used in .vehicle-slider,
+       the specific .vehicle-slider .box rule above should override text-align and padding.
+       If .vehicle-slider .box is a different element, this generic .box rule remains.
+       The subtask implies .vehicle-slider .box is the card itself.
+    */
   }
   
-  .box img {
+  .box img { /* Generic .box img */
     width: 100%;
     max-width: 300px;
     margin-bottom: 20px;
   }
   
+  /* .box h3, .box .price, .box p below are generic styles for elements within a .box */
+  /* These might be overridden by more specific styles like .vehicle-slider .box .content h3 */
   .box h3 {
-    font-size: 24px;
+    font-size: 2.4rem;
     margin-bottom: 10px;
+    /* font-family and font-weight are set by the grouped selector */
   }
   
   .box .price {
-    font-size: 18px;
+    font-size: 1.8rem; /* =18px */
     margin-bottom: 10px;
+     /* font-family should be Montserrat if it's a price, like .feature .price */
+    font-family: 'Montserrat', sans-serif;
   }
   
-  .box p {
-    font-size: 14px;
+  .box p { /* This is a generic .box p */
+    font-size: 1.6rem; /* Adjusted from 1.4rem to standard body text */
     margin-bottom: 0;
   }
   
@@ -398,6 +471,10 @@ section a #Btn{
     margin-right: 10px;
     cursor: pointer;
   }
+  .swiper-pagination-bullet-active {
+    background-color: #007BFF;
+    opacity: 1;
+  }
 
 /* Vehicles Section end */
 
@@ -423,17 +500,22 @@ section a #Btn{
     transform: scale(1.08);
 }
 .feature .box .content h3{
-    font-size: 2.2rem;
+    font-size: 2rem; /* Adjusted font size */
+    margin-bottom: 0.5rem; /* Added margin */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .feature .box .content .stars{
-    padding: 1rem 0;
+    padding: 1rem 0; /* Existing padding */
+    margin-bottom: 1rem; /* Added margin */
 }
 .feature .box .content .stars i{
     color: var(--main);
     font-size: 1.7rem;
 }
 .feature .price{
-    font-size: 2.5rem;
+    font-size: 2.2rem; /* Adjusted font size */
+    margin-bottom: 1.5rem; /* Added margin */
+    /* font-family and font-weight are set by the grouped selector */
 }
 /* Featured section end */
 
@@ -451,18 +533,19 @@ section a #Btn{
 }
 .services .heading{
     margin-bottom: 20px;
-    margin-top: 190px;
+    margin-top: 8rem; /* Adjusted from 190px */
 }
 .services .boxContainer .box p{
     line-height: 1.8;
     padding: 1rem 0;
-    font-size: 1.4rem;
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-bottom: 1.5rem; /* Added margin */
 }
 .services .boxContainer .box{
     box-shadow: var(--box-shadow);
     border: var(--border);
-    border-radius: 0.5rem;
-    padding: 20px;
+    border-radius: 0.8rem; /* Adjusted border-radius */
+    padding: 3rem; /* Adjusted padding */
     text-align: center;
     cursor: pointer;
 }
@@ -471,14 +554,19 @@ section a #Btn{
     color: #c5c5c5;
 }
 .services .boxContainer .box i{
-    height: 6rem;
-    width: 6rem;
+    height: 7rem; /* Adjusted size */
+    width: 7rem; /* Adjusted size */
     border-radius: 50%;
-    line-height: 6rem;
+    line-height: 7rem; /* Adjusted size */
     background: var(--main);
-    color: #000;
-    font-size: 2.5rem;
+    color: #fff;
+    font-size: 3rem; /* Adjusted font size */
+    margin-bottom: 1.5rem; /* Adjusted margin */
+}
+.services .boxContainer .box h3{ /* Added specific rule for h3 in service box */
+    font-size: 2rem;
     margin-bottom: 1rem;
+    /* font-family and font-weight are set by the grouped typography rule */
 }
 /* Services Section End */
 
@@ -495,41 +583,43 @@ section a #Btn{
 }
 .ReviewSlider .box {
     background-color: #fff;
-    padding: 20px;
+    padding: 3rem; /* Increased padding */
     margin: 0 auto;
-    width: 80%;
-    max-width: 600px;
+    width: 80%; /* Existing width */
+    max-width: 650px; /* Increased max-width */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    border-radius: 10px; /* Existing border-radius */
     text-align: center;
 }
 .ReviewSlider .box img {
     display: block;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.5rem; /* Adjusted margin */
     max-width: 100%;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+    width: 70px; /* Adjusted size */
+    height: 70px; /* Adjusted size */
     object-fit: cover;
 }
 .ReviewSlider .box .content {
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Existing margin */
 }  
 .ReviewSlider .box .stars {
-    margin-top: 20px;
+    margin-top: 20px; /* Existing margin */
     color:var(--main);
 }
 .ReviewSlider .box .stars i {
-    font-size: 20px;
+    font-size: 20px; /* Existing font size */
     margin-right: 5px;
 }
 .ReviewSlider .box h3{
-    font-size: 2.2rem;
-    padding-bottom: 0.5rem;
+    font-size: 2rem; /* Adjusted font size */
+    padding-bottom: 0.5rem; /* Existing padding */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .ReviewSlider .box p{
-    font-size: 1.4rem;
-    padding: 1rem 0;
+    font-size: 1.5rem; /* Adjusted font size */
+    line-height: 1.7; /* Added line-height */
+    padding: 1rem 0; /* Existing padding */
 }
 /*Review Section End */
 
@@ -558,38 +648,48 @@ section a #Btn{
   
 .newsletter h3{
     color: var(--main);
-    font-size: 3rem;
+    font-size: 2.8rem; /* Adjusted font size */
+    margin-bottom: 1rem; /* Added margin */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .newsletter p{
-    font-size: 2rem;
+    font-size: 1.6rem; /* Adjusted font size */
     color:#fff;
-    padding: 1rem 0;
+    padding: 1rem 0; /* Existing padding */
+    margin-bottom: 2rem; /* Added margin */
     z-index: 3;
     position: relative;
 }
 .newsletter form{
-    height: 5rem;
-    max-width: 60rem;
+    height: auto; /* Changed height to auto */
+    max-width: 65rem; /* Increased max-width */
     background: #fff;
     border-radius: 0.5rem;
     box-shadow: var(--box-shadow);
     display: flex;
     margin: 1rem auto;
-    overflow: hidden;
+    overflow: hidden; /* Keep this if there are any internal elements that might overflow the border-radius */
+    padding: 0.5rem; /* Added padding to form */
 }
-form input[type="email"] {
+.newsletter form input[type="email"] {
   font-size: 1.7rem;
-  height: 100%;
-  width: 40rem;
+  flex-grow: 1; /* Allow email field to take available space */
+  width: auto; /* Override previous fixed width */
   text-transform: none;
-  padding: 0 .2rem;
+  padding: 1rem; /* Added padding for better height */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
 }
-form input[type="submit"] {
+.newsletter form input[type="submit"] {
   font-size: 1.7rem;
-  height: 100%;
-  width: 20rem;
-  background: var(--main);
+  background: #007BFF; /* Accent color */
+  color: #fff;
   cursor: pointer;
+  padding: 1rem; /* Added padding for better height */
+  border-radius: 0.5rem;
+  width: auto; /* Let padding define width or set specific if needed e.g. 15rem */
+  border: none; /* Ensure no default border */
 }
 /* News Letter Section End */
 
@@ -599,16 +699,17 @@ form input[type="submit"] {
   text-align: center;
 }
 
-.heading {
-  font-size: 36px;
-  font-weight: bold;
+.heading { /* This is .gallery .heading */
+  font-size: 3.6rem; /* =36px, close to 3.5rem requested */
+  font-weight: bold; /* Retained, specific for this heading */
   margin-bottom: 30px;
+  /* font-family is set by the grouped selector */
 }
 
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 3rem; /* Increased gap */
 }
 .gallery .heading h2 span{
     color: var(--main);
@@ -617,6 +718,8 @@ form input[type="submit"] {
 .gallery-item {
   position: relative;
   overflow: hidden;
+  border: 1px solid #ddd; /* Added border */
+  border-radius: 0.5rem; /* Added border-radius */
 }
 
 .gallery-item img {
@@ -667,9 +770,9 @@ form input[type="submit"] {
     position: relative;
     background-color: white;
     margin: 10% auto;
-    padding: 20px;
-    border-radius: 5px;
-    max-width: 600px;
+    padding: 3rem; /* Increased padding */
+    border-radius: 5px; /* Existing border-radius */
+    max-width: 700px; /* Increased max-width */
   }
   
   /* Close Button */
@@ -689,19 +792,22 @@ form input[type="submit"] {
   
   .carImage img {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%; /* Responsive within popup */
+    border-radius: 0.5rem; /* Added border-radius */
+    margin-bottom: 1.5rem; /* Added margin */
   }
   
   /* Car Price */
   .carPrice {
     text-align: center;
-    margin-top: 10px;
+    margin-top: 10px; /* Existing margin */
   }
   
   .carPrice p {
     font-weight: bold;
-    font-size: 24px;
+    font-size: 2.2rem; /* Adjusted font size */
     color: #333;
+    margin-bottom: 1.5rem; /* Added margin */
   }
   
   /* Car Tabs */
@@ -716,10 +822,14 @@ form input[type="submit"] {
   
   .carTabs li {
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 1rem 1.5rem; /* Increased padding */
     border-radius: 5px;
     background-color: #eee;
     transition: background-color 0.2s ease-in-out;
+    margin-right: 1rem; /* Added margin */
+  }
+  .carTabs li:last-child {
+    margin-right: 0; /* Remove margin for last tab */
   }
   
   .carTabs li.active {
@@ -744,11 +854,12 @@ form input[type="submit"] {
     list-style: none;
     margin: 0;
     padding: 0;
+    padding-top: 1rem; /* Added padding-top */
   }
   
   .tabContent li {
-    margin: 10px 0;
-    font-size: 18px;
+    margin: 0.8rem 0; /* Adjusted margin */
+    font-size: 1.6rem; /* Adjusted font size */
   }
   
   /* Car Buttons */
@@ -758,14 +869,15 @@ form input[type="submit"] {
     margin-top: 20px;
   }
   
-  .buyNowButton {
-    background-color: var(--main);
+  .buyNowButton { /* Assuming this is the one in the popup */
+    background-color: #007BFF;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
+    border-radius: 0.5rem; /* Consistent with .btn */
+    padding: 1rem 2rem; /* Adjusted padding */
     cursor: pointer;
-    font-size: 18px;
+    font-size: 1.7rem; /* Consistent with .btn */
+    font-family: 'Montserrat', sans-serif; /* Consistent with .btn */
   }
   
   .buyNowButton i {
@@ -806,26 +918,28 @@ form input[type="submit"] {
 .contact .row{
     display: flex;
     flex-wrap: wrap;
-    gap: 1.5rem;
+    gap: 2.5rem; /* Increased gap */
 }
 .contact iframe{
     flex: 1 1 42rem;
     width: 100%;
-    padding: 2rem;
+    padding: 2rem; /* Existing padding */
     box-shadow: var(--box-shadow);
     border: var(--border);
-    border-radius: 0.5rem;
+    border-radius: 0.8rem; /* Adjusted border-radius */
 }
-.contact form{
+.contact form{ /* Appointment form */
     flex: 1 1 42rem;
-    padding: 7rem;
+    padding: 3rem; /* Adjusted padding */
     box-shadow: var(--box-shadow);
     text-align: center;
     border-radius: 0.5rem;
 }
-.contact h3{
-    font-size: 3rem;
-    padding-bottom: 1rem;
+.contact h3{ /* Form title */
+    font-size: 2.4rem; /* Adjusted font size */
+    padding-bottom: 1rem; /* Existing padding, consider increasing if needed */
+    margin-bottom: 2rem; /* Added margin */
+    /* font-family and font-weight are set by the grouped selector */
 }
 .contact h3 span{
     color: var(--main);
@@ -847,9 +961,9 @@ form input[type="submit"] {
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
-    padding: 2rem;
+    padding: 3rem; /* Adjusted padding */
     border-radius: 0.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; /* Existing margin */
     max-width: 100%;
     width: 919rem;
     box-shadow: var(--box-shadow);
@@ -859,18 +973,20 @@ form input[type="submit"] {
 }
 .contact-info h3 {
     margin: 0;
-    font-weight: 500;
-    font-size: 4rem;
-    font-weight: 500;
+    font-weight: 600;
+    font-size: 2.4rem; /* Adjusted font size */
     text-align: center;
+    margin-bottom: 1.5rem; /* Added margin */
+    /* font-family is set by the grouped selector */
     /* align-items: center;
     justify-content: center; */
 } 
 .contact-info p {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem; /* Adjusted font size */
     text-align: center;
     color: #333;
+    margin-bottom: 1rem; /* Added margin */
 }
 .contact-info i{
     color: var(--main);
@@ -892,8 +1008,8 @@ form input[type="submit"] {
     font-size: 2rem;
   }
   
-  .contact-info p {
-    font-size: 1.6rem;
+  .contact-info p { /* Media query adjustment */
+    font-size: 1.6rem; /* Retained */
     margin-top: 0.5rem;
   }
 }
@@ -909,26 +1025,46 @@ form input[type="submit"] {
 .footer{
     width: 100%;
     text-align: center;
-    padding: 30px 0;
+    padding: 4rem 9%; /* Adjusted padding */
     background-color:#f5f5f5;
 }
 .footer h4 span{
     color: var(--main);
 }
 .footer h4{
-    margin-bottom: 25px;
-    margin-top: 60px;
+    margin-bottom: 2rem; /* Adjusted margin */
+    margin-top: 60px; /* Existing margin */
     font-weight: 600;
-    font-size:3rem;
+    font-size: 2.4rem; /* Adjusted font size */
+    /* font-family is set by the grouped selector */
 }
 .footer p{
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjusted font size */
+    line-height: 1.7; /* Added line-height */
+    color: #333; /* Ensuring good contrast for p text */
+    max-width: 70ch; /* Constrained width for readability */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem; /* Added margin */
 }
-.icons .fab{
+/* Targeting the last two p tags for specific margin, assuming they are for copyright and "made with love" */
+.footer p:nth-last-of-type(1),
+.footer p:nth-last-of-type(2) {
+    max-width: none; /* Remove max-width constraint */
+    margin-top: 2rem; /* Add top margin */
+    margin-bottom: 0; /* Reset bottom margin if needed, or adjust if it's the very last element */
+}
+/* If the "Made with love" p is the very last, this will ensure its bottom margin is small or zero */
+.footer p:last-of-type {
+    margin-bottom: 0.5rem;
+}
+
+.footer .icons .fab{ /* Assuming this is the selector for social media icons */
     color: var(--main);
-    margin: 0 13px;
+    margin: 0 1rem; /* Adjusted margin */
     cursor: pointer;
-    padding: 18px 0;
+    padding: 18px 0; /* Existing padding */
+    font-size: 2rem; /* Added font size */
 }
 .fa-heart{
     color: var(--main);
